@@ -1,0 +1,18 @@
+[color]
+    ui = true
+    branch = true
+    diff = true
+    interactive = true
+    status = true
+[color "status"]
+    added = green
+    changed = red
+    deleted = red
+    untracked = yellow
+[user]
+    name = blyddon22
+    email = blyddon22@gmail.com
+[push]
+    default = matching
+[alias]
+    co = checkout
