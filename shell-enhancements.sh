@@ -49,14 +49,18 @@ alias ping='ping -c 5'      # Pings with 5 packets, not unlimited
 alias gs='git status'
 alias gd='git diff'
 alias gc='git commit'
-alias push='git push origin master'
-alias pull='git pull --rebase'
+alias push='git publish'
+alias pull='git pull-rebase'
 alias ts='tig status'
 alias delete_pyc='find . -name \*.pyc -exec rm \{\} \+'
 alias c='clear'
 alias vom='vim'
 alias vi='vim'
 alias cljs='planck'
+alias m='python manage.py'
+alias srcm='python src/manage.py'
+alias mm='git fetch && git merge origin/master'
+alias etf='ember t -s --test-port=7444 --filter'V
 # >>1
 
 # Functions <<1
