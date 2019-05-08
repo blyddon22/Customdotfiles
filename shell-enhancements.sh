@@ -80,7 +80,6 @@ alias iyapf="yapf . --parallel --recursive -i -p --exclude='./dist/*' --exclude=
 alias pr='hub pull-request'
 alias gcb='git checkout -b'
 alias gcm='git checkout master'
-publish = "!git push origin $(git branch-name)"
 
 alias mkvenv3="pyenv virtualenv 3.4.9"
 alias rmvenv="pyenv deactivate && pyenv uninstall"
