@@ -61,6 +61,29 @@ alias m='python manage.py'
 alias srcm='python src/manage.py'
 alias mm='git fetch && git merge origin/master'
 alias etf='ember t -s --test-port=7444 --filter'V
+
+alias p3m='python3 manage.py'
+alias p3='python3'
+alias tree="tree -I '*.pyc|__pycache__'"
+alias showhidden="defaults write com.apple.finder AppleShowAllFiles TRUE;killall Finder"
+alias killhidden="defaults write com.apple.finder AppleShowAllFiles FALSE;killall Finder"
+alias pyclean="find . -name '*.pyc' -delete"
+alias showstash="git stash list | awk -F: '{ print \"\n\n\n\n\"; print $0; print \"\n\n\"; system(\"git stash show -p \" $1); }'"
+alias git-track='function _gittrack(){ git branch --set-upstream-to=origin/"$1" "$1";};_gittrack'
+alias which-tmux='tmux display-message -p "#S"'
+alias mkvenv27='mkvirtualenv  -p/Users/imtapps/.pyenv/versions/2.7.12/bin/python'
+alias myip="curl http://ipecho.net/plain; echo"
+alias prod-db="./manage.py tunnel dbtunnel --environment=Production --application=$1 --port=1234"
+alias pull='git pull'
+alias eft='ember exam --split=2 --parallel --silent'
+alias iyapf="yapf . --parallel --recursive -i -p --exclude='./dist/*' --exclude='./.tox/*' --exclude='./*.egg-info' --style='{based_on_style: facebook, COLUMN_LIMIT: 120, BLANK_LINE_BEFORE_NESTED_CLASS_OR_DEF: true, ALLOW_SPLIT_BEFORE_DICT_VALUE: false}'"
+alias pr='hub pull-request'
+alias gcb='git checkout -b'
+alias gcm='git checkout master'
+publish = "!git push origin $(git branch-name)"
+
+alias mkvenv3="pyenv virtualenv 3.4.9"
+alias rmvenv="pyenv deactivate && pyenv uninstall"
 # >>1
 
 # Functions <<1
