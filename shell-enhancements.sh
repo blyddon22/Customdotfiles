@@ -83,6 +83,7 @@ alias gcm='git checkout master'
 
 alias mkvenv3="pyenv virtualenv 3.4.9"
 alias rmvenv="pyenv deactivate && pyenv uninstall"
+alias deactivate="pyenv deactivate"
 # >>1
 
 # Functions <<1
