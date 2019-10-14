@@ -81,9 +81,14 @@ alias pr='hub pull-request'
 alias gcb='git checkout -b'
 alias gcm='git checkout master'
 
-alias mkvenv3="pyenv virtualenv 3.4.9"
+alias mkvenv3="pyenv virtualenv 3.6.8"
+alias mkvenv2="pyenv virtualenv 2.7.12"
 alias rmvenv="pyenv deactivate && pyenv uninstall"
 alias deactivate="pyenv deactivate"
+
+alias pipir="pip install -r requirements/dev.txt --upgrade"
+alias ember-s-ssl="ember s --ssl --ssl-key ~/.tls/localhost.imtapps.com.key --ssl-cert ~/.tls/localhost.imtapps.com.crt"
+alias mrssl="./manage.py dev runsslserver --key ~/.tls/localhost.imtapps.com.key --certificate ~/.tls/localhost.imtapps.com.crt"
 # >>1
 
 # Functions <<1
