@@ -1,0 +1,33 @@
+snippet cl "console.log(...)" b
+console.log($0);
+endsnippet
+
+snippet pt "await pauseTest()" b
+await pauseTest();
+endsnippet
+
+snippet clb "bookended console log" b
+console.log("<><><>");
+console.log($0);
+console.log("<><><>");
+endsnippet
+
+snippet fun "new function" i
+function($1) {$2}
+endsnippet
+
+snippet test "test('testname')" !b
+test('$1', function(assert) {
+	$2
+});
+endsnippet
+
+snippet cp "computed" !b
+$1: computed(function() {
+	$2
+}),
+endsnippet
+
+snippet ae "assert.equal()" !b
+assert.equal($1, $2);
+endsnippet
