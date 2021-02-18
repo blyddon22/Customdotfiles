@@ -22,3 +22,5 @@
     branch-name = "!git rev-parse --abbrev-ref HEAD"
     publish = "!git push origin $(git branch-name)"
     pull-rebase = "!git pull origin $(git branch-name) --rebase"
+[init]
+	templatedir = ~/.git-templates
