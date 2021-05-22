@@ -1,6 +1,5 @@
 #!/bin/zsh
 # vim: set foldmarker=<<,>> foldlevel=0 foldmethod=marker:
-
 # General Settings <<1
 # Add Heroku Toolbelt to the path on osx <<2
 #-------------------------------------------------------------------------------
@@ -29,7 +28,6 @@ fi
 export KEYTIMEOUT=1
 # >>2
 # >>1
-
 # Aliases <<1
 #-------------------------------------------------------------------------------
 if [ "$(uname)" = "Darwin" ]; then
@@ -42,55 +40,39 @@ else
     alias clean='sudo apt-get autoclean && sudo apt-get autoremove'
     alias root_trash='sudo bash -c "exec rm -r /root/.local/share/Trash/{files,info}/*"'
 fi
-alias ll='ls -lh'
-alias la='ls -la'
-alias less='less -imJMW'
-alias ping='ping -c 5'      # Pings with 5 packets, not unlimited
+
 alias gs='git status'
 alias gd='git diff'
 alias gc='git commit'
 alias push='git publish'
-alias pull='git pull-rebase'
-alias ts='tig status'
-alias delete_pyc='find . -name \*.pyc -exec rm \{\} \+'
-alias c='clear'
-alias vom='vim'
-alias vi='vim'
-alias cljs='planck'
-alias m='python manage.py'
-alias srcm='python src/manage.py'
-alias mm='git fetch && git merge origin/master'
-alias etf='ember t -s --test-port=7444 --filter'V
-
-alias p3m='python3 manage.py'
-alias p3='python3'
-alias tree="tree -I '*.pyc|__pycache__'"
-alias showhidden="defaults write com.apple.finder AppleShowAllFiles TRUE;killall Finder"
-alias killhidden="defaults write com.apple.finder AppleShowAllFiles FALSE;killall Finder"
-alias pyclean="find . -name '*.pyc' -delete"
-alias showstash="git stash list | awk -F: '{ print \"\n\n\n\n\"; print $0; print \"\n\n\"; system(\"git stash show -p \" $1); }'"
-alias git-track='function _gittrack(){ git branch --set-upstream-to=origin/"$1" "$1";};_gittrack'
-alias which-tmux='tmux display-message -p "#S"'
-alias mkvenv27='mkvirtualenv  -p/Users/imtapps/.pyenv/versions/2.7.12/bin/python'
-alias myip="curl http://ipecho.net/plain; echo"
-alias prod-db="./manage.py tunnel dbtunnel --environment=Production --application=$1 --port=1234"
 alias pull='git pull'
-alias eft='ember exam --split=2 --parallel --silent'
-alias iyapf="yapf . --parallel --recursive -i -p --exclude='./dist/*' --exclude='./.tox/*' --exclude='./*.egg-info' --style='{based_on_style: facebook, COLUMN_LIMIT: 120, BLANK_LINE_BEFORE_NESTED_CLASS_OR_DEF: true, ALLOW_SPLIT_BEFORE_DICT_VALUE: false}'"
-alias pr='hub pull-request'
+alias ts='tig status'
+alias pr='gh pr create'
 alias gcb='git checkout -b'
 alias gcm='git checkout master'
 alias gcp='git checkout production'
+alias clone='gh repo clone'
+alias showstash="git stash list | awk -F: '{ print \"\n\n\n\n\"; print $0; print \"\n\n\"; system(\"git stash show -p \" $1); }'"
+alias git-track='function _gittrack(){ git branch --set-upstream-to=origin/"$1" "$1";};_gittrack'
 
+alias delete_pyc='find . -name \*.pyc -exec rm \{\} \+'
+alias c='clear'
+alias m='python manage.py'
+alias pyclean="find . -name '*.pyc' -delete"
 alias mkvenv="pyenv virtualenv 3.6.8"
 alias rmvenv="pyenv deactivate && pyenv uninstall"
+alias mkvenv27='mkvirtualenv  -p/Users/imtapps/.pyenv/versions/2.7.12/bin/python'
 alias deactivate="pyenv deactivate"
-
 alias pipir="pip install -r requirements/dev.txt --upgrade"
-alias ember-s-ssl="ember s --ssl --ssl-key ~/.tls/localhost.imtapps.com.key --ssl-cert ~/.tls/localhost.imtapps.com.crt"
 alias mrssl="./manage.py dev runsslserver --key ~/.tls/localhost.imtapps.com.key --certificate ~/.tls/localhost.imtapps.com.crt"
-# >>1
 
+alias which-tmux='tmux display-message -p "#S"'
+alias iyapf="yapf . --parallel --recursive -i -p --exclude='./dist/*' --exclude='./.tox/*' --exclude='./*.egg-info' --style='{based_on_style: facebook, COLUMN_LIMIT: 120, BLANK_LINE_BEFORE_NESTED_CLASS_OR_DEF: true, ALLOW_SPLIT_BEFORE_DICT_VALUE: false}'"
+
+alias emberssl='ember s --ssl --ssl-key ~/.tls/imtapps-active.key --ssl-cert ~/.tls/imtapps-active.crt'
+alias emberts='ember t -s --filter $1'
+alias eft='ember exam --split=2 --parallel --silent'
+# >>1
 # Functions <<1
 #===============================================================================
 # Python webserver <<2
