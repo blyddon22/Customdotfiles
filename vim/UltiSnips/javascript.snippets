@@ -31,3 +31,12 @@ endsnippet
 snippet ae "assert.equal()" !b
 assert.equal($1, $2);
 endsnippet
+
+snippet getset "getter/setter" !b
+get $1() {
+	return $2;
+}
+set $3(val) {
+	$4;
+}
+endsnippet
