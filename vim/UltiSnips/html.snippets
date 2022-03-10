@@ -7,6 +7,11 @@ snippet if "{{#if }}" b
 {{/if}}
 endsnippet
 
+snippet unless "{{#unless }}" b
+{{#unless $0}}
+{{/unless}}
+endsnippet
+
 snippet p "<p></p>" b
 <p>$0</p>
 endsnippet
@@ -44,8 +49,12 @@ snippet h6 "<h6></h6>" b
 <h6>$0</h6>
 endsnippet
 
+snippet span "<span></span>" b
+<span>$0</span>
+endsnippet
+
 snippet button "<button></button>" b
-<button>$0</button>
+<button type="button">$0</button>
 endsnippet
 
 snippet linkto "LinkTo" b
@@ -65,4 +74,10 @@ snippet tr "tr" b
 <tr>
   $0
 </tr>
+endsnippet
+
+snippet withchangeset "withchangeset" b
+{{#with (changeset $1 this.validate) as |$2|}}
+  $3
+{{/with}}
 endsnippet

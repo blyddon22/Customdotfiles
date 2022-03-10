@@ -7,8 +7,10 @@
 " Plugin Configurations
 "===============================================================================
 let g:UltiSnipsSnippetDirectories=[$HOME."/dotfiles/custom-configs/Customdotfiles/vim/UltiSnips"]
-let g:UltiSnipsJumpForwardTrigger="9<Tab>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsEditSplit="vertical"
+
 
 "===============================================================================
 " Plugin Keymappings
@@ -20,8 +22,8 @@ function! UltiSnipsCallUnite()
   return ''
 endfunction
 
-inoremap 9<Tab> <C-R>=(pumvisible()? "\<LT>C-E>":"")<CR><C-R>=UltiSnipsCallUnite()<CR>
-nnoremap 9<Tab> a<C-R>=(pumvisible()? "\<LT>C-E>":"")<CR><C-R>=UltiSnipsCallUnite()<CR>
+inoremap <Tab> <C-R>=(pumvisible()? "\<LT>C-E>":"")<CR><C-R>=UltiSnipsCallUnite()<CR>
+nnoremap <Tab> a<C-R>=(pumvisible()? "\<LT>C-E>":"")<CR><C-R>=UltiSnipsCallUnite()<CR>
 
 "===============================================================================
 " Unite Keymap Menu Item(s)

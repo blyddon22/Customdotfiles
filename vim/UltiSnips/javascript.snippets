@@ -17,7 +17,7 @@ function($1) {$2}
 endsnippet
 
 snippet test "test('testname')" !b
-test('$1', function(assert) {
+test('$1', async function (assert) {
 	$2
 });
 endsnippet
@@ -32,6 +32,14 @@ snippet ae "assert.equal()" !b
 assert.equal($1, $2);
 endsnippet
 
+snippet step "assert.step()" !b
+assert.step($1);
+endsnippet
+
+snippet verify "assert.verifySteps()" !b
+assert.verifySteps([$1]);
+endsnippet
+
 snippet getset "getter/setter" !b
 get $1() {
 	return $2;
@@ -39,4 +47,27 @@ get $1() {
 set $3(val) {
 	$4;
 }
+endsnippet
+
+snippet action "action" !b
+@action
+$1() {
+  $2;
+}
+endsnippet
+
+snippet click "click" !b
+await click($1);
+endsnippet
+
+snippet dom "dom" !b
+assert.dom($1)$2;
+endsnippet
+
+snippet set "set" !b
+this.set($1, $2);
+endsnippet
+
+snippet iaction "import action" !b
+import { action } from '@ember/object';
 endsnippet

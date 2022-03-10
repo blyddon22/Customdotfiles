@@ -64,7 +64,7 @@ alias rmvenv="pyenv deactivate && pyenv uninstall"
 alias mkvenv27='mkvirtualenv  -p/Users/imtapps/.pyenv/versions/2.7.12/bin/python'
 alias deactivate="pyenv deactivate"
 alias pipir="pip install -r requirements/dev.txt --upgrade"
-alias mrssl="./manage.py dev runsslserver --key ~/.tls/localhost.imtapps.com.key --certificate ~/.tls/localhost.imtapps.com.crt"
+alias mrssl="./manage.py dev runsslserver --key ~/.tls/imtapps-active.key --certificate ~/.tls/imtapps-active.crt"
 
 alias which-tmux='tmux display-message -p "#S"'
 alias iyapf="yapf . --parallel --recursive -i -p --exclude='./dist/*' --exclude='./.tox/*' --exclude='./*.egg-info' --style='{based_on_style: facebook, COLUMN_LIMIT: 120, BLANK_LINE_BEFORE_NESTED_CLASS_OR_DEF: true, ALLOW_SPLIT_BEFORE_DICT_VALUE: false}'"
